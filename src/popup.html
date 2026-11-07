@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MakeMidas</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="top">
+      <img src="icons/icon-32.png" alt="" width="20" height="20" />
+      <span class="brand">MakeMidas</span>
+      <span class="spacer"></span>
+      <button id="sign-out" class="link" hidden>Sign out</button>
+    </header>
+
+    <main id="app">
+      <p class="muted">Loading…</p>
+    </main>
+
+    <template id="signed-out">
+      <section class="card">
+        <h1>AI images and videos from anything on the web</h1>
+        <p class="muted">
+          Right-click a picture to restyle it or turn it into a video, or
+          select some text to make an image from it. Nano Banana, GPT Image,
+          Veo, Kling and more, on your MakeMidas credits.
+        </p>
+        <button id="sign-in" class="primary">Sign in to MakeMidas</button>
+        <p class="fine">
+          New here? Create a free account in the sign-in window: free credits
+          every day, no card.
+        </p>
+      </section>
+    </template>
+
+    <template id="signed-in">
+      <p id="account" class="muted small"></p>
+      <section class="card">
+        <div class="tabs" role="tablist">
+          <button id="kind-image" role="tab" class="tab" data-kind="image">
+            Image
+          </button>
+          <button id="kind-video" role="tab" class="tab" data-kind="video">
+            Video
+          </button>
+        </div>
+        <div id="reference" class="reference"></div>
+        <textarea
+          id="prompt"
+          rows="3"
+          maxlength="4000"
+          placeholder="Describe what to make"
+        ></textarea>
+        <div class="row">
+          <select id="model" title="Model"></select>
+        </div>
+        <div class="row">
+          <select id="aspect" title="Aspect ratio"></select>
+          <select id="duration" title="Length" hidden></select>
+        </div>
+        <button id="generate" class="primary">Generate</button>
+        <p id="hint" class="fine" hidden></p>
+      </section>
+      <section id="active" class="card" hidden></section>
+      <section class="recent">
+        <h2>Recent</h2>
+        <div id="recent" class="grid"><p class="muted small">Loading…</p></div>
+        <a id="open-site" class="small" target="_blank">Open MakeMidas</a>
+      </section>
+    </template>
+
+    <p id="error" class="error" role="alert" hidden></p>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

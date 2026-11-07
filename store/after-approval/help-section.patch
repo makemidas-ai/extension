@@ -1,0 +1,48 @@
+diff --git a/content/pages/help.md b/content/pages/help.md
+index d16406e..00da00b 100644
+--- a/content/pages/help.md
++++ b/content/pages/help.md
+@@ -2,7 +2,7 @@
+ title: Help Center
+ seoTitle: "Help Center: Credits, Generating and Downloads"
+ description: How MakeMidas works, from free daily credits and plans to generating images and videos, pet portraits, downloads, refunds and your data.
+-date: 2026-11-06
++date: 2026-11-07
+ ---
+ 
+ ## What you can make
+@@ -57,6 +57,10 @@ Connect MakeMidas to ChatGPT, Claude, Claude Code, Cursor or another app that su
+ - **Pictures.** ChatGPT can pass a picture you attach. In apps that can't, the assistant gives you a link to upload it in the generator.
+ - **Disconnecting.** Remove any app in **Settings → Connections**. It loses access at once.
+ 
++## Browser extension
++
++The MakeMidas extension for Chrome, Edge and Firefox lets you start from anything on the web. Right-click a picture and pick **Create an image from this picture** or **Turn this picture into a video**, or select some text and pick **Create an image from "…"**. The MakeMidas popup opens with the picture or text filled in: choose a model and select **Generate**. Results show in the popup and in your history, and you get a notification when a video is ready. The first time, sign in from the popup and select **Allow**. If a site won't let us download a picture, save it and add it from your computer in the popup.
++
+ ## API keys
+ 
+ Use an API key to make images and videos from your own scripts and apps. Create one in **Settings → API Keys** and keep it secret: anyone with the key can spend your credits. If a key leaks, delete it there and create a new one. The API spends the same credits as the website; requests and examples are on the [Developers](/developers#api) page.
+diff --git a/content/pages/help.zh.md b/content/pages/help.zh.md
+index b9a8d8a..2d9a9c4 100644
+--- a/content/pages/help.zh.md
++++ b/content/pages/help.zh.md
+@@ -2,7 +2,7 @@
+ title: 帮助中心
+ seoTitle: "帮助中心：积分、生成与下载"
+ description: MakeMidas 怎么用：每日免费积分和套餐、生成图片和视频、宠物画像、下载、退款以及你的数据。
+-date: 2026-11-06
++date: 2026-11-07
+ ---
+ 
+ ## 可以做什么
+@@ -57,6 +57,10 @@ date: 2026-11-06
+ - **图片。** ChatGPT 可以转交你附加的图片。不能转交图片的应用，会给你一个链接，到生成器里上传。
+ - **断开。** 在**设置 → 连接**中移除任何应用，它会立即失去访问权限。
+ 
++## 浏览器扩展
++
++MakeMidas 的 Chrome、Edge 和 Firefox 扩展让你从网页上的任何内容开始。右键一张图片，选择 **Create an image from this picture**（用这张图生成图片）或 **Turn this picture into a video**（把这张图做成视频）；或者选中一段文字，选择 **Create an image from …**（用这段文字生成图片）。MakeMidas 弹窗会打开并填好图片或文字，选好模型后点击 **Generate** 即可。扩展界面目前只有英文。结果会显示在弹窗和你的历史记录里，视频做好时你会收到通知。第一次使用时，在弹窗里登录，并在授权页点击**允许**。如果某个网站不允许我们下载图片，把图片保存下来，再在弹窗里从电脑添加。
++
+ ## API 密钥
+ 
+ 用 API 密钥可以在你自己的脚本和应用里生成图片和视频。在**设置 → API 密钥**中创建，并妥善保管：拿到密钥的人都能花你的积分。密钥泄露时，在同一页面删除它并新建一个。API 消耗的积分和网站相同；请求方式和示例见[开发者](/developers#api)页面。

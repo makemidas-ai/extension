@@ -1,0 +1,12 @@
+{
+  "name": "makemidas-browser-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Make AI images and videos from any picture or text on the web with MakeMidas",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:local": "node scripts/build.mjs --base http://localhost:4000"
+  }
+}

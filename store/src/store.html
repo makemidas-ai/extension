@@ -1,0 +1,63 @@
+<!doctype html>
+<!--
+  Store images. Render with Playwright (see store/listing.md):
+  store.html#shot-1 / #shot-2 at 1280x800, #promo at 440x280.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: -apple-system, 'Segoe UI', system-ui, sans-serif; color: #1f1d1a; }
+  .frame { display: none; position: relative; overflow: hidden;
+    background: radial-gradient(circle at 80% 20%, #f3e3d8 0, #faf9f7 55%); }
+  .frame.on { display: flex; }
+  .shot { width: 1280px; height: 800px; align-items: center; gap: 72px; padding: 0 96px; }
+  .copy { flex: 1; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 26px; margin-bottom: 40px; }
+  .brand img { width: 44px; height: 44px; border-radius: 10px; }
+  h1 { font: 700 54px/1.1 Georgia, 'Times New Roman', serif; letter-spacing: -0.5px; margin-bottom: 22px; }
+  p { font-size: 22px; line-height: 1.5; color: #5b564f; max-width: 520px; }
+  .pill { display: inline-block; margin-top: 28px; padding: 10px 18px; border-radius: 999px;
+    background: #fff; border: 1px solid #e7e3dc; font-size: 18px; color: #6b665f; }
+  .popup { width: 400px; border-radius: 18px; overflow: hidden; background: #faf9f7;
+    box-shadow: 0 30px 80px rgb(60 40 20 / 0.25), 0 2px 8px rgb(0 0 0 / 0.08); border: 1px solid #e7e3dc; }
+  .popup img { display: block; width: 400px; }
+  .promo { width: 440px; height: 280px; flex-direction: column; justify-content: center; padding: 0 36px;
+    background: linear-gradient(135deg, #c96442, #a8472b); color: #fff; }
+  .promo .brand { margin-bottom: 18px; font-size: 24px; }
+  .promo .brand img { background: #faf9f7; }
+  .promo h2 { font: 700 30px/1.15 Georgia, serif; }
+  .promo span { display: block; margin-top: 12px; font-size: 15px; opacity: 0.9; }
+</style>
+</head>
+<body>
+  <section id="shot-1" class="frame shot">
+    <div class="copy">
+      <div class="brand"><img src="logo.png" alt="" />MakeMidas</div>
+      <h1>Start from any picture on the web</h1>
+      <p>Right-click a picture to restyle it or turn it into a video, or select text to make an image from it.</p>
+      <span class="pill">Nano Banana · GPT Image · Seedream · Veo · Kling</span>
+    </div>
+    <div class="popup"><img src="popup-reference.png" alt="" /></div>
+  </section>
+  <section id="shot-2" class="frame shot">
+    <div class="copy">
+      <div class="brand"><img src="logo.png" alt="" />MakeMidas</div>
+      <h1>Your results, right in the browser</h1>
+      <p>See recent images and videos in the popup, save them in one click, and get a notification when a video is ready.</p>
+      <span class="pill">Uses your MakeMidas credits · free daily credits</span>
+    </div>
+    <div class="popup"><img src="popup-results.png" alt="" /></div>
+  </section>
+  <section id="promo" class="frame promo">
+    <div class="brand"><img src="logo.png" alt="" />MakeMidas</div>
+    <h2>AI images and videos from anything on the web</h2>
+    <span>Right-click a picture or text to start</span>
+  </section>
+  <script>
+    const id = location.hash.slice(1) || 'shot-1';
+    document.getElementById(id).classList.add('on');
+  </script>
+</body>
+</html>
