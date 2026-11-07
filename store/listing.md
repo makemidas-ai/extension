@@ -3,6 +3,10 @@
 Packages: `npm run build` → `dist/makemidas-chrome-<version>.zip` (Chrome and Edge) and `dist/makemidas-firefox-<version>.zip` (Firefox).
 Images: `store/screenshot-1.png`, `store/screenshot-2.png` (1280×800), `store/promo-tile-440x280.png`, icon `src/icons/icon-128.png`. Rendered from `store/src/store.html` (`#shot-1`, `#shot-2`, `#promo`) with captures of the popup; re-render after UI changes.
 
+## Status
+
+- 2026-11-07: 0.1.0 submitted to the Chrome Web Store (filled in by hand: Chrome blocks extensions from scripting the store) and to Firefox AMO (slug `makemidas`; slugs are limited to 30 characters; marked "requires payment"; source code: no build step). Edge Add-ons not submitted yet.
+
 ## Basics
 
 - **Name:** MakeMidas: AI Image & Video Generator
